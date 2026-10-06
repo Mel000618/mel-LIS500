@@ -1,0 +1,322 @@
+/* Shared stylesheet for all four pages，makes the content style stay consistent. White background and dark color content make it readable MM */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f7f5ef;
+  color: #24332e;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+header,
+main,
+footer {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+main {
+  padding-bottom: 48px;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+h1,
+h2,
+h3 {
+  color: #234c3c;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  margin: 12px 0 24px;
+  font-size: clamp(36px, 6vw, 60px);
+}
+
+h2 {
+  margin: 0 0 20px;
+  font-size: 28px;
+}
+
+h3 {
+  margin: 0 0 14px;
+  font-size: 22px;
+}
+
+.panel h2:not(:first-child),
+.panel h3 {
+  margin-top: 28px;
+}
+
+/* */
+
+a {
+  color: #245b49;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+a:hover {
+  color: #773e24;
+}
+
+a:focus-visible {
+  outline: 3px solid #773e24;
+  outline-offset: 5px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -10000px;
+}
+
+.skip-link:focus {
+  top: 12px;
+  left: 12px;
+  padding: 12px 18px;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+/* Header and Navigation setting, consistent throughout the website MM*/
+
+header {
+  padding: 24px 0;
+  border-bottom: 1px solid #cbd2ca;
+}
+
+.site-name {
+  margin: 0 0 14px;
+  color: #234c3c;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+nav a {
+  font-weight: bold;
+}
+
+nav a[aria-current="page"] {
+  color: #773e24;
+  text-decoration-thickness: 3px;
+}
+
+/*Page introduction style MM */
+
+.intro {
+  max-width: 800px;
+  padding: 56px 0 36px;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  color: #526257;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Cards make the content easy to read */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.card,
+.panel,
+.team-member {
+  min-width: 0;
+  padding: 28px;
+  background-color: #ffffff;
+  border: 1px solid #cbd2ca;
+  border-radius: 12px;
+}
+
+.card p:last-child,
+.panel p:last-child,
+.team-member p:last-child {
+  margin-bottom: 0;
+}
+
+/* team members' name and photo, suitable sizing of photo won't interupt visitors MM */
+
+.team-section {
+  margin-top: 48px;
+}
+
+.team-section > h2 {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-photo {
+  display: block;
+  width: 200px;
+  height: auto;
+  aspect-ratio: 1;
+  max-width: 100%;
+  margin: 0 auto 24px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.team-member h3 {
+  margin: 0 0 8px;
+  font-size: 26px;
+}
+
+.team-major {
+  margin: 0 0 16px;
+  color: #526257;
+  font-size: 15px;
+}
+
+/* clear resource guide motivate visitors to read MM */
+
+.panel {
+  margin-top: 24px;
+  scroll-margin-top: 24px;
+}
+
+.page-links {
+  padding: 18px 0;
+  border-top: 1px solid #cbd2ca;
+  border-bottom: 1px solid #cbd2ca;
+}
+
+ul,
+ol {
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+.resource-list li {
+  margin-bottom: 24px;
+}
+
+.resource-list li:last-child {
+  margin-bottom: 0;
+}
+
+.resource-list a {
+  font-weight: bold;
+}
+
+.resource-list p {
+  margin: 6px 0 0;
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+figure {
+  margin: 24px 0;
+}
+
+figcaption {
+  margin-top: 8px;
+  color: #526257;
+  font-size: 14px;
+}
+
+video {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+
+audio {
+  display: block;
+  width: 100%;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* Footer of the website, have some basic information. MM*/
+
+footer {
+  padding: 24px 0;
+  border-top: 1px solid #cbd2ca;
+  font-size: 14px;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+/* Stack cards and team profiles on smaller screens. MM */
+
+@media (max-width: 750px) {
+  .cards,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    padding-top: 36px;
+  }
+
+  .card,
+  .panel,
+  .team-member {
+    padding: 22px;
+  }
+
+  nav {
+    gap: 12px 18px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .team-section {
+    margin-top: 36px;
+  }
+}
