@@ -340,3 +340,10 @@ footer p {
     grid-template-columns: 1fr;
   }
 }
+/* Keep the portrait at its original proportions. MM */
+.hero-photo {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+}
